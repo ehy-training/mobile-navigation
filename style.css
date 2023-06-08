@@ -1,0 +1,223 @@
+/*---------------------
+RESET
+---------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+section a {
+    text-decoration: underline;
+}
+
+section a:hover,
+a {
+    text-decoration: none;
+}
+
+
+nav ul {
+    list-style-type: none;
+}
+
+.burger-icon {
+    display: none;
+}
+
+/*---------------------
+LAYOUT
+---------------------*/
+
+header > *,
+nav.main-nav > ul,
+section,
+footer > * {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em 20px;
+}
+
+header {
+    min-height: 15vw;
+}
+
+h1 {
+    padding-bottom: 0;
+}
+
+section {
+    min-height: 100vh;
+    padding-top: 8em;
+}
+
+section h2 {
+    padding-bottom: 2em;
+}
+
+article {
+    min-height: 100vh;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+article h3 {
+    padding-top: 3em;
+}
+
+footer {
+    height: 30vh;
+}
+
+/*---------------------
+TYPOGRAPHY
+---------------------*/
+
+body {
+    font-family: 'Inter';
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+
+
+
+/*---------------------
+COLOR
+---------------------*/
+:root {
+    --header-color: hsl(200, 55%, 55%);
+    --header-background: hsl(200, 21%, 21%);
+    --nav-background: hsl(200, 55%, 34%);
+    --nav-background-trans: hsla(200, 55%, 34%, 0.5);
+    --color-accent-1: rgb(255, 128, 0);
+    --color-accent-2: hsl(90, 97%, 55%);
+    --color-accent-3: #fff;
+}
+
+header {
+    background: var(--header-background);
+}
+
+header,
+.burger-icon {
+    color: var(--header-color);
+}
+
+header p {
+    color: #fff;
+}
+
+nav.main-nav {
+    background: var(--nav-background);
+}
+
+nav.main-nav a {
+    color: hsl(200, 97%, 63%);
+}
+
+nav.main-nav > ul > li > ul {
+    background: hsl(200, 97%, 63%);
+}
+
+nav.main-nav > ul > li > ul a {
+    color: hsl(200, 55%, 34%);
+}
+
+nav.main-nav a:hover {
+    color: #fff;
+}
+
+section {
+    background: hsl(200, 21%, 55%);
+}
+
+section,
+section a {
+    color: #fff;
+}
+
+section a:hover {
+    color: var(--color-accent-2);
+}
+
+.section-1 {
+    background: hsl(0, 55%, 34%);
+}
+
+.section-2 {
+    background: hsl(200, 76%, 42%);
+}
+
+.section-3 {
+    background: hsl(90, 76%, 34%);
+}
+
+article {
+    background: rgba(255, 255, 255, 0.3)
+}
+
+
+/*---------------------
+NAV
+---------------------*/
+
+/**--------
+Main Nav
+--------**/
+
+nav.main-nav {
+    position: sticky;
+    width: 100%;
+    top: 0;
+}
+
+
+nav.main-nav > ul {
+    display: flex;
+    padding-bottom: 0;
+}
+
+nav.main-nav a {
+    padding: 0 0.5em;
+}
+
+nav.main-nav a.first-item {
+    padding-left: 0;
+}
+
+nav.main-nav > ul > li {
+    position: relative;
+}
+
+nav.main-nav > ul > li > ul {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+}
+
+nav.main-nav > ul > li:hover > ul {
+    height: auto;
+}
+
+/**--------
+Burger Icon
+--------**/
+
+:root {
+    --burger-icon-size: 4rem;
+    --burger-icon-height: 70px;
+}
+
+/*
+.burger-icon {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    text-align: right;
+    padding: 20px;
+    font-size: 3em;
+}

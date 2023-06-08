@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Icons für Mobile Menüs</title>
+    <link rel="stylesheet" href="assets/fonts/inter/font-style.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome/css/all.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    .burger-icon {
+        display: block;
+        font-size: var(--burger-icon-size);
+        background: var(--header-background);
+        text-align: right;
+        padding: 20px;
+        margin-bottom 8px;
+    }
+
+
+    section h2,
+    section p {
+        margin-bottom: 1rem;
+        padding-top: 2rem;
+    }
+
+
+    /*Icons als SVG eingebunden*/
+    .burger-icon span svg,
+    .burger-icon span.icon {
+        height: var(--burger-icon-size);
+        width: var(--burger-icon-size);
+    }
+
+    .burger-icon span svg {
+        fill: var(--header-color);
+    }
+
+
+    /*Icons mit HTML Elmenten gebaut*/
+    .burger-icon span.icon,
+    .burger-icon span.bars span {
+        display: inline-block;
+        position: relative;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    .burger-icon span.icon span {
+        background: var(--header-color);
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 20%;
+        border-radius: 3px;
+    }
+
+    .burger-icon span.bars span:nth-child(2) {
+        top: 40%;
+    }
+
+    .burger-icon span.bars span:nth-child(3) {
+        top: 80%;
+    }
+
+    .burger-icon span.times span:nth-child(1) {
+        top: 50%;
+        transform: rotate(45deg);
+    }
+
+    .burger-icon span.times span:nth-child(2) {
+        top: 50%;
+        transform: rotate(-45deg);
+    }
+</style>
+
+<body>
+
+    <main>
+        <section>
+            <h2>Icons per Unicode Zeichen</h2>
+            <p>"Burger" Icon: Unicode Zeichen U+2630 Trigram for Heaven</p>
+            <nav class="burger-icon"><span>&#x2630;</span></nav>
+            <p>Close Icon: Unicode Zeichen U+00D7 Multiplication Sign</p>
+            <nav class="burger-icon"><span>&#x00D7;</span></nav>
+        </section>
+        
+        <section>
+            <h2>Icons per Fontawesome</h2>
+            <p>"Burger" Icon: Font Awesome Icon "Bars", <a href="https://fontawesome.com/v5/icons/bars?f=classic&s=solid" target="_blank">https://fontawesome.com/v5/icons/bars?f=classic&s=solid</a></p>
+            <nav class="burger-icon"><span class="fas fa-bars"></span></nav>
+
+            <p>Close Icon: Font Awesome Icon "Times", <a href="https://fontawesome.com/v5/icons/times?f=classic&s=solid" target="_blank">https://fontawesome.com/v5/icons/times?f=classic&s=solid</a></p>
+            <nav class="burger-icon"><span class="fas fa-times"></span></nav>
+        </section>
+        
+        <section>
+            <h2>Icons als SVG</h2>
+            <p>"Burger" Icon: Font Awesome Icon "Bars" als SVG eingebunden</p>
+            <nav class="burger-icon"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
+                        <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+                    </svg></span></nav>
+            <p>Close Icon: Font Awesome Icon "Times" als SVG eingebunden</p>
+            <nav class="burger-icon"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512">
+                        <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
+                        <path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" />
+                    </svg></span></nav>
+        </section>
+        
+        <section>
+            <h2>Icons aus HMTL Elementen</h2>
+            <p>"Burger" Icon aus drei Span Elementen </p>
+                <nav class="burger-icon">
+                <span class="icon bars">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+            </span></nav>
+            <p>Close Icon aus zwei Span Elementen</p>
+                <nav class="burger-icon">
+                <span class="icon times">
+                    <span></span>
+                    <span></span>
+            </span></nav>
+        </section>
+    </main>
+</body></html>

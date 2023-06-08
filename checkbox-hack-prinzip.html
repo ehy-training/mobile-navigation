@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile Menus Sandbox</title>
+
+    <style>
+        /**--------
+        Burger Icon
+        --------**/
+        #mobile-menu-toggle {
+            display: none;
+            /* Hide the checkbox */
+        }
+        
+        label {
+            font-size: 4em;
+        }
+        
+          /**--------
+        Overlay Menu Design
+        --------**/   
+        
+        #mobile-menu ul {
+            list-style-type: none;
+        }
+        
+        #mobile-menu a {
+            text-decoration: none;
+        } 
+
+
+        /**--------
+        Overlay Menu Behaviour
+        --------**/
+        #mobile-menu {
+                        display: none;
+            /* Hide the menu by default */
+        }
+
+        #mobile-menu-toggle:checked~#mobile-menu {
+            display: block;
+            /* Show the menu when checkbox is checked */
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="checkbox" id="mobile-menu-toggle">
+    <label for="mobile-menu-toggle">&#x2630;</label>
+    <nav id="mobile-menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Über uns</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+    </nav>
+
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

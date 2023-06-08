@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Checkbox Hack</title>
+    <link rel="stylesheet" href="assets/fonts/inter/font-style.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome/css/all.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        label,
+        #mobile-menu-toggle {
+            display: none;
+        }
+
+        label {
+            position: fixed;
+            top: 0;
+            font-size: var(--burger-icon-size);
+            height: var(--burger-icon-height);
+            color: var(--header-color);
+            background: var(--header-background);
+            width: 100%;
+            text-align: right;
+            line-height: 1;
+        }
+
+
+
+
+
+        @media only screen and (max-width: 600px) {
+
+            #main-nav {
+                display: none;
+            }
+
+            label,
+            #mobile-menu-toggle:checked~#main-nav {
+                display: block;
+            }
+
+            #mobile-menu-toggle:checked~#menu-label::after {
+                content: "\00D7"; /*Unicode U+00D7 Multiplication Sign*/
+                padding-right: 0.1em;
+                font-weight: 400;
+            }
+
+            #menu-label::after {
+                content: "\2630"; /*Unicode U+2630 Trigram for Heaven*/
+            }
+
+
+
+            header {
+                padding-top: 75px;
+            }
+
+
+            /*Main Nav Design zu Overlay Menu */
+            nav.main-nav {
+                position: fixed;
+                top: 70px;
+                min-height: calc(100vh);
+                background: rgba(255, 255, 255, 0.9);
+            }
+
+            nav.main-nav>ul {
+                display: block;
+            }
+
+            nav.main-nav>ul>li>ul {
+                display: none;
+            }
+
+            nav.main-nav a,
+            nav.main-nav a.first-item {
+                padding: 1em;
+            }
+
+            nav.main-nav a {
+                display: inline-block;
+                width: 100%;
+                font-size: 1.6em;
+                border-bottom: 1px solid var(--nav-background-trans);
+                color: var(--header-background);
+            }
+
+            nav.main-nav a:hover {
+                color: var(--header-color);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Der Checkbox Hack</h1>
+        <p>Einfache HMTL-basierte Lösung ohne JavaScript und mit nur wenig CSS</p>
+
+
+
+    </header>
+
+    <input type="checkbox" id="mobile-menu-toggle">
+    <label for="mobile-menu-toggle" id="menu-label"></label>
+
+    <nav id="main-nav" class="main-nav">
+        <ul>
+            <li><a href="#" class="first-item">Home/Top</a></li>
+            <li><a href="#section-1">Kurzbeschreibung</a></li>
+            <li><a href="#section-2">Section 2</a>
+                <ul>
+                    <li><a href="#article-1">Article 1</a></li>
+                    <li><a href="#article-2">Article 2</a></li>
+                    <li><a href="#article-3">Article 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#section-3">Section 3</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="section-1" class="section-1">
+            <h2>Kurzbeschreibung</h2>
+            <p>
+                Der Checkbox Hack ist eine Technik, um ein Overlay-Menü für mobile Webseiten zu erstellen, ohne JavaScript zu verwenden. Dabei wird eine unsichtbare Checkbox und das dazugehörige Label genutzt, um den Zustand des Menüs zu steuern. Beim Klicken auf das Label wird die Checkbox aktiviert, was wiederum das Menü ein- oder ausblendet. Dies ermöglicht eine reine CSS-Lösung für das Overlay-Menü.
+            </p>
+        </section>
+        <section id="section-2" class="section-2">
+            <h2>Section 2</h2>
+            <article id="article-1">
+                <h3>Article 1</h3>
+            </article>
+            <article id="article-2">
+                <h3>Article 2</h3>
+            </article>
+            <article id="article-3">
+                <h3>Article 3</h3>
+            </article>
+        </section>
+        <section id="section-3" class="section-3">
+            <h2>Section 3</h2>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2023 Enno Hyttrek</p>
+    </footer>
+
+</body></html>
